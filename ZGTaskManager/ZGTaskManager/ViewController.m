@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "ZGTaskManager.h"
-#import "ZGTimeIntevel.h"
 #import "ZGTimerView.h"
 
 @interface ViewController ()

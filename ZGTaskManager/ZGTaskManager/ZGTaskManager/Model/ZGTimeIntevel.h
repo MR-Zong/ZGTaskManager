@@ -10,7 +10,7 @@
 
 @interface ZGTimeIntevel : NSObject
 
-@property (nonatomic,assign) NSInteger intevel;
+@property (nonatomic,assign) NSInteger timeIntevel;
 
 + (instancetype)timerIntevelWithNumber:(NSInteger)timeIntevel;
 

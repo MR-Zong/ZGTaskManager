@@ -7,8 +7,8 @@
 //
 
 #import "ZGTimerView.h"
-#import "ZGTimeIntevel.h"
 #import "ZGTaskManager.h"
+#import "ZGTimeIntevel.h"
 
 @interface ZGTimerView ()
 
@@ -50,12 +50,12 @@
     self.timeLabel1.backgroundColor = [UIColor greenColor];
     self.timeLabel1.frame = CGRectMake(80, 100, 60, 30);
     __weak ZGTimerView *weakSelf = self;
-    self.timeLabel1.text = [self timeStrWithNumber:self.timeIntevel[0]];
-    [self.taskManager addTaskWithBlock:^BOOL{
-        ZGTimeIntevel *timeIntevel = weakSelf.timeIntevel[0];
-        timeIntevel.intevel--;
-        weakSelf.timeLabel1.text = [weakSelf timeStrWithNumber:timeIntevel];
-        if (timeIntevel.intevel <= 0) {
+    self.timeLabel1.text = [self timeStrWithNumber:((ZGTimeIntevel *)self.timeIntevel[0]).timeIntevel];
+    [self.taskManager addTaskWithAfter:0 timeIntervel:1 block:^BOOL{
+       ZGTimeIntevel *totalTime = weakSelf.timeIntevel[0];
+        totalTime.timeIntevel--;
+        weakSelf.timeLabel1.text = [weakSelf timeStrWithNumber:totalTime.timeIntevel];
+        if (totalTime.timeIntevel <= 0) {
             return NO;
         }else {
             return YES;
@@ -71,13 +71,12 @@
     UILabel *timeLabel2 = [[UILabel alloc] init];
     self.timeLabel2 = timeLabel2;
     self.timeLabel2.backgroundColor = [UIColor whiteColor];
-    self.timeLabel2.text = [self timeStrWithNumber:self.timeIntevel[1]];
-    [self.taskManager addTaskWithBlock:^BOOL{
-        ZGTimeIntevel *timeIntevel = weakSelf.timeIntevel[1];
-        timeIntevel.intevel--;
-        weakSelf.timeLabel2.text = [weakSelf timeStrWithNumber:timeIntevel];
-        
-        if (timeIntevel.intevel <= 0) {
+    self.timeLabel2.text = [self timeStrWithNumber:((ZGTimeIntevel *)self.timeIntevel[0]).timeIntevel];
+    [self.taskManager addTaskWithAfter:0 timeIntervel:1 block:^BOOL{
+        ZGTimeIntevel *totalTime = weakSelf.timeIntevel[1];
+        totalTime.timeIntevel--;
+        weakSelf.timeLabel2.text = [weakSelf timeStrWithNumber:totalTime.timeIntevel];
+        if (totalTime.timeIntevel <= 0) {
             return NO;
         }else {
             return YES;
@@ -93,19 +92,19 @@
     self.timeLabel3 = timeLabel3;
     self.timeLabel3.backgroundColor = [UIColor whiteColor];
     self.timeLabel3.frame = CGRectMake(80, 150, 60, 30);
-    self.timeLabel3.text = [self timeStrWithNumber:self.timeIntevel[2]];
-    [self.taskManager addTaskWithBlock:^BOOL{
-        ZGTimeIntevel *timeIntevel = weakSelf.timeIntevel[2];
-        timeIntevel.intevel--;
-        weakSelf.timeLabel3.text = [weakSelf timeStrWithNumber:timeIntevel];
-        
-        if (timeIntevel.intevel <= 0) {
+    self.timeLabel3.text = [self timeStrWithNumber:((ZGTimeIntevel *)self.timeIntevel[0]).timeIntevel];
+    [self.taskManager addTaskWithAfter:0 timeIntervel:1 block:^BOOL{
+        ZGTimeIntevel *totalTime = weakSelf.timeIntevel[2];
+        totalTime.timeIntevel--;
+        weakSelf.timeLabel3.text = [weakSelf timeStrWithNumber:totalTime.timeIntevel];
+        if (totalTime.timeIntevel <= 0) {
             return NO;
         }else {
             return YES;
         }
         
-    }];    [self addSubview:timeLabel3];
+    }];
+    [self addSubview:timeLabel3];
     
     
     
@@ -113,13 +112,12 @@
     self.timeLabel4 = timeLabel4;
     self.timeLabel4.backgroundColor = [UIColor greenColor];
     self.timeLabel4.frame = CGRectMake(160, 150, 60, 30);
-    self.timeLabel4.text = [self timeStrWithNumber:self.timeIntevel[3]];
-    [self.taskManager addTaskWithBlock:^BOOL{
-        ZGTimeIntevel *timeIntevel = weakSelf.timeIntevel[3];
-        timeIntevel.intevel--;
-        weakSelf.timeLabel4.text = [weakSelf timeStrWithNumber:timeIntevel];
-        
-        if (timeIntevel.intevel <= 0) {
+    self.timeLabel4.text = [self timeStrWithNumber:((ZGTimeIntevel *)self.timeIntevel[0]).timeIntevel];
+    [self.taskManager addTaskWithAfter:0 timeIntervel:1 block:^BOOL{
+        ZGTimeIntevel *totalTime = weakSelf.timeIntevel[3];
+        totalTime.timeIntevel--;
+        weakSelf.timeLabel4.text = [weakSelf timeStrWithNumber:totalTime.timeIntevel];
+        if (totalTime.timeIntevel <= 0) {
             return NO;
         }else {
             return YES;
@@ -133,9 +131,9 @@
 }
 
 
-- (NSString *)timeStrWithNumber:(ZGTimeIntevel *)timeIntevel
+- (NSString *)timeStrWithNumber:(NSUInteger)timeIntevel
 {
-    return [NSString stringWithFormat:@"%zd",timeIntevel.intevel];
+    return [NSString stringWithFormat:@"%zd",timeIntevel];
 }
 
 - (ZGTimeIntevel *)timeIntevelWithDict:(NSDictionary *)dict

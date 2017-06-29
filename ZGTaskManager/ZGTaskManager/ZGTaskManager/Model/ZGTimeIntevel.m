@@ -14,7 +14,7 @@
 + (instancetype)timerIntevelWithNumber:(NSInteger)timeIntevel
 {
     ZGTimeIntevel *tmpTimeIntevel = [[ZGTimeIntevel alloc] init];
-    tmpTimeIntevel.intevel = timeIntevel;
+    tmpTimeIntevel.timeIntevel = timeIntevel;
     return tmpTimeIntevel;
 }
 

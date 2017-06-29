@@ -6,15 +6,22 @@
 //  Copyright © 2015年 Zong. All rights reserved.
 //
 
+
 #import <Foundation/Foundation.h>
 
-typedef BOOL (^Task)(void);
+typedef BOOL (^ZGTaskBlock)(void);
 
 @interface ZGTaskManager : NSObject
 
+@property (nonatomic, assign) NSUInteger totalTime;
 
 + (instancetype)shareTaskManager;
 
-- (void)addTaskWithBlock:(Task)task;
+/**
+ * after 延迟调用时间  timeIntervel 时间间隔  block 任务
+ */
+- (void)addTaskWithAfter:(NSUInteger)afterSeconds timeIntervel:(NSUInteger)timeIntervel block:(ZGTaskBlock)taskBlock;
+
+- (void)terminate;
 
 @end

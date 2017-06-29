@@ -15,9 +15,9 @@
 		EF18E10B1C22491A005AD2FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF18E1091C22491A005AD2FC /* LaunchScreen.storyboard */; };
 		EF18E1161C22491A005AD2FC /* ZGTaskManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF18E1151C22491A005AD2FC /* ZGTaskManagerTests.m */; };
 		EF18E1211C22491A005AD2FC /* ZGTaskManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF18E1201C22491A005AD2FC /* ZGTaskManagerUITests.m */; };
-		EF18E1341C2249EA005AD2FC /* ZGTimeIntevel.m in Sources */ = {isa = PBXBuildFile; fileRef = EF18E1331C2249EA005AD2FC /* ZGTimeIntevel.m */; };
 		EF18E1371C2249F9005AD2FC /* ZGTaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF18E1361C2249F9005AD2FC /* ZGTaskManager.m */; };
 		EF18E13A1C224A06005AD2FC /* ZGTimerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF18E1391C224A06005AD2FC /* ZGTimerView.m */; };
+		EFAEC0A51F04D98700E64837 /* ZGTimeIntevel.m in Sources */ = {isa = PBXBuildFile; fileRef = EFAEC0A41F04D98700E64837 /* ZGTimeIntevel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,12 +54,12 @@
 		EF18E11C1C22491A005AD2FC /* ZGTaskManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZGTaskManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF18E1201C22491A005AD2FC /* ZGTaskManagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZGTaskManagerUITests.m; sourceTree = "<group>"; };
 		EF18E1221C22491A005AD2FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EF18E1321C2249EA005AD2FC /* ZGTimeIntevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGTimeIntevel.h; sourceTree = "<group>"; };
-		EF18E1331C2249EA005AD2FC /* ZGTimeIntevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGTimeIntevel.m; sourceTree = "<group>"; };
 		EF18E1351C2249F9005AD2FC /* ZGTaskManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGTaskManager.h; sourceTree = "<group>"; };
 		EF18E1361C2249F9005AD2FC /* ZGTaskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGTaskManager.m; sourceTree = "<group>"; };
 		EF18E1381C224A06005AD2FC /* ZGTimerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGTimerView.h; sourceTree = "<group>"; };
 		EF18E1391C224A06005AD2FC /* ZGTimerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGTimerView.m; sourceTree = "<group>"; };
+		EFAEC0A31F04D98700E64837 /* ZGTimeIntevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGTimeIntevel.h; sourceTree = "<group>"; };
+		EFAEC0A41F04D98700E64837 /* ZGTimeIntevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGTimeIntevel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,20 +153,11 @@
 		EF18E12E1C224963005AD2FC /* ZGTaskManager */ = {
 			isa = PBXGroup;
 			children = (
-				EF18E12F1C224963005AD2FC /* Model */,
+				EFAEC0A21F04D98700E64837 /* Model */,
 				EF18E1301C224963005AD2FC /* Util */,
 				EF18E1311C224963005AD2FC /* View */,
 			);
 			path = ZGTaskManager;
-			sourceTree = "<group>";
-		};
-		EF18E12F1C224963005AD2FC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				EF18E1321C2249EA005AD2FC /* ZGTimeIntevel.h */,
-				EF18E1331C2249EA005AD2FC /* ZGTimeIntevel.m */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		EF18E1301C224963005AD2FC /* Util */ = {
@@ -185,6 +176,15 @@
 				EF18E1391C224A06005AD2FC /* ZGTimerView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		EFAEC0A21F04D98700E64837 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EFAEC0A31F04D98700E64837 /* ZGTimeIntevel.h */,
+				EFAEC0A41F04D98700E64837 /* ZGTimeIntevel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,7 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF18E1031C22491A005AD2FC /* ViewController.m in Sources */,
-				EF18E1341C2249EA005AD2FC /* ZGTimeIntevel.m in Sources */,
+				EFAEC0A51F04D98700E64837 /* ZGTimeIntevel.m in Sources */,
 				EF18E1001C22491A005AD2FC /* AppDelegate.m in Sources */,
 				EF18E13A1C224A06005AD2FC /* ZGTimerView.m in Sources */,
 				EF18E0FD1C22491A005AD2FC /* main.m in Sources */,
@@ -548,6 +548,7 @@
 				EF18E1271C22491A005AD2FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF18E1281C22491A005AD2FC /* Build configuration list for PBXNativeTarget "ZGTaskManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -556,6 +557,7 @@
 				EF18E12A1C22491A005AD2FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF18E12B1C22491A005AD2FC /* Build configuration list for PBXNativeTarget "ZGTaskManagerUITests" */ = {
 			isa = XCConfigurationList;
@@ -564,6 +566,7 @@
 				EF18E12D1C22491A005AD2FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
