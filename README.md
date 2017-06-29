@@ -14,4 +14,4 @@
 ####3，使用简单，提供一个addTaskWithBlock方法，要用到倒计时的地方，直接调用此方法，把你的操作代码放进block即可
 
 #效果展示
-![时间任务管理展示]{https://github.com/MR-Zong/ZGTaskManager/blob/master/ZGTaskManager/ZGTaskManager/taskManagerShow.png}
+![时间任务管理展示](https://github.com/MR-Zong/ZGTaskManager/blob/master/ZGTaskManager/ZGTaskManager/taskManagerShow.png)
