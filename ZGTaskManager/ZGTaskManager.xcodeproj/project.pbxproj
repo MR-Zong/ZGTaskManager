@@ -18,6 +18,7 @@
 		EF18E1371C2249F9005AD2FC /* ZGTaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF18E1361C2249F9005AD2FC /* ZGTaskManager.m */; };
 		EF18E13A1C224A06005AD2FC /* ZGTimerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF18E1391C224A06005AD2FC /* ZGTimerView.m */; };
 		EFAEC0A51F04D98700E64837 /* ZGTimeIntevel.m in Sources */ = {isa = PBXBuildFile; fileRef = EFAEC0A41F04D98700E64837 /* ZGTimeIntevel.m */; };
+		EFAEC0A71F04E9E400E64837 /* taskManagerShow.png in Resources */ = {isa = PBXBuildFile; fileRef = EFAEC0A61F04E9E400E64837 /* taskManagerShow.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		EF18E1391C224A06005AD2FC /* ZGTimerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGTimerView.m; sourceTree = "<group>"; };
 		EFAEC0A31F04D98700E64837 /* ZGTimeIntevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGTimeIntevel.h; sourceTree = "<group>"; };
 		EFAEC0A41F04D98700E64837 /* ZGTimeIntevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGTimeIntevel.m; sourceTree = "<group>"; };
+		EFAEC0A61F04E9E400E64837 /* taskManagerShow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taskManagerShow.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		EF18E0FB1C22491A005AD2FC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EFAEC0A61F04E9E400E64837 /* taskManagerShow.png */,
 				EF18E0FC1C22491A005AD2FC /* main.m */,
 			);
 			name = "Supporting Files";
@@ -291,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF18E10B1C22491A005AD2FC /* LaunchScreen.storyboard in Resources */,
+				EFAEC0A71F04E9E400E64837 /* taskManagerShow.png in Resources */,
 				EF18E1081C22491A005AD2FC /* Assets.xcassets in Resources */,
 				EF18E1061C22491A005AD2FC /* Main.storyboard in Resources */,
 			);
